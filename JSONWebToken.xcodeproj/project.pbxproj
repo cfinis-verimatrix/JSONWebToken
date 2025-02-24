@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -153,6 +153,7 @@
 		71D917A01C07573300FA5CDE /* TestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 71D9179F1C07573300FA5CDE /* TestCertificate.cer */; };
 		71EA699C1C0320720081AF85 /* TokenValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA699B1C0320720081AF85 /* TokenValidator.swift */; };
 		71EA699F1C0323320081AF85 /* TokenSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA699E1C0323320081AF85 /* TokenSigner.swift */; };
+		A06B939E2D6C6C1500016AD8 /* Data+hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AF7F482474191A00DDF6C0 /* Data+hash.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +177,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 719156971D1D3BE900FC55C9;
 			remoteInfo = "JSONWebToken tvOS";
+		};
+		A06B939C2D6C690E00016AD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 717ACFC51BFB6842004E01D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71642F3E1D9BB1F2008BBA95;
+			remoteInfo = TestContainer;
+		};
+		A06B93CB2D6C7A7F00016AD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 717ACFC51BFB6842004E01D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A06B93B92D6C7A5300016AD8;
+			remoteInfo = TestContainerTvOS;
+		};
+		A06B93CD2D6C7BE400016AD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 717ACFC51BFB6842004E01D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A06B93B92D6C7A5300016AD8;
+			remoteInfo = TestContainerTvOS;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -267,7 +289,12 @@
 		71EA699B1C0320720081AF85 /* TokenValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenValidator.swift; sourceTree = "<group>"; };
 		71EA699E1C0323320081AF85 /* TokenSigner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenSigner.swift; sourceTree = "<group>"; };
 		71EA69A41C035EA90081AF85 /* HMACTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMACTests.swift; sourceTree = "<group>"; };
+		A06B93BA2D6C7A5300016AD8 /* TestContainerTvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestContainerTvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A06B93BB2D6C7A5300016AD8 /* TestContainerTvOS */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = TestContainerTvOS; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		71642F3C1D9BB1F2008BBA95 /* Frameworks */ = {
@@ -307,6 +334,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A06B93B72D6C7A5300016AD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -332,6 +366,7 @@
 				719156991D1D3BE900FC55C9 /* JSONWebToken tvOS */,
 				719156A51D1D3BE900FC55C9 /* JSONWebToken tvOSTests */,
 				71642F401D9BB1F2008BBA95 /* TestContainer */,
+				A06B93BB2D6C7A5300016AD8 /* TestContainerTvOS */,
 				717ACFCF1BFB6842004E01D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -344,6 +379,7 @@
 				719156981D1D3BE900FC55C9 /* JSONWebToken.framework */,
 				719156A11D1D3BE900FC55C9 /* JSONWebToken tvOSTests.xctest */,
 				71642F3F1D9BB1F2008BBA95 /* TestContainer.app */,
+				A06B93BA2D6C7A5300016AD8 /* TestContainerTvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -537,6 +573,7 @@
 			dependencies = (
 				7190899E1C036F6B00A7A209 /* PBXTargetDependency */,
 				71642F521D9BB210008BBA95 /* PBXTargetDependency */,
+				A06B93CE2D6C7BE400016AD8 /* PBXTargetDependency */,
 			);
 			name = JSONWebTokenTests;
 			productName = JSONWebTokenTests;
@@ -573,11 +610,35 @@
 			);
 			dependencies = (
 				719156A41D1D3BE900FC55C9 /* PBXTargetDependency */,
+				A06B939D2D6C690E00016AD8 /* PBXTargetDependency */,
+				A06B93CC2D6C7A7F00016AD8 /* PBXTargetDependency */,
 			);
 			name = "JSONWebToken tvOSTests";
 			productName = "JSONWebToken tvOSTests";
 			productReference = 719156A11D1D3BE900FC55C9 /* JSONWebToken tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A06B93B92D6C7A5300016AD8 /* TestContainerTvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A06B93C82D6C7A5500016AD8 /* Build configuration list for PBXNativeTarget "TestContainerTvOS" */;
+			buildPhases = (
+				A06B93B62D6C7A5300016AD8 /* Sources */,
+				A06B93B72D6C7A5300016AD8 /* Frameworks */,
+				A06B93B82D6C7A5300016AD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A06B93BB2D6C7A5300016AD8 /* TestContainerTvOS */,
+			);
+			name = TestContainerTvOS;
+			packageProductDependencies = (
+			);
+			productName = TestContainerTvOS;
+			productReference = A06B93BA2D6C7A5300016AD8 /* TestContainerTvOS.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -585,7 +646,7 @@
 		717ACFC51BFB6842004E01D0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Antoine Palazzolo";
 				TargetAttributes = {
@@ -610,6 +671,10 @@
 					};
 					719156A01D1D3BE900FC55C9 = {
 						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A06B93B92D6C7A5300016AD8;
+					};
+					A06B93B92D6C7A5300016AD8 = {
+						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
@@ -631,6 +696,7 @@
 				719156971D1D3BE900FC55C9 /* JSONWebToken tvOS */,
 				719156A01D1D3BE900FC55C9 /* JSONWebToken tvOSTests */,
 				71642F3E1D9BB1F2008BBA95 /* TestContainer */,
+				A06B93B92D6C7A5300016AD8 /* TestContainerTvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -772,6 +838,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A06B93B82D6C7A5300016AD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -822,6 +895,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A06B939E2D6C6C1500016AD8 /* Data+hash.swift in Sources */,
 				719156EB1D1D3C8F00FC55C9 /* SignatureAlgorithm.swift in Sources */,
 				719156EA1D1D3C8F00FC55C9 /* JSONWebToken.swift in Sources */,
 				719156EC1D1D3C8F00FC55C9 /* TokenSigner.swift in Sources */,
@@ -851,6 +925,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A06B93B62D6C7A5300016AD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -868,6 +949,21 @@
 			isa = PBXTargetDependency;
 			target = 719156971D1D3BE900FC55C9 /* JSONWebToken tvOS */;
 			targetProxy = 719156A31D1D3BE900FC55C9 /* PBXContainerItemProxy */;
+		};
+		A06B939D2D6C690E00016AD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71642F3E1D9BB1F2008BBA95 /* TestContainer */;
+			targetProxy = A06B939C2D6C690E00016AD8 /* PBXContainerItemProxy */;
+		};
+		A06B93CC2D6C7A7F00016AD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A06B93B92D6C7A5300016AD8 /* TestContainerTvOS */;
+			targetProxy = A06B93CB2D6C7A7F00016AD8 /* PBXContainerItemProxy */;
+		};
+		A06B93CE2D6C7BE400016AD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A06B93B92D6C7A5300016AD8 /* TestContainerTvOS */;
+			targetProxy = A06B93CD2D6C7BE400016AD8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -901,12 +997,19 @@
 				CODE_SIGN_ENTITLEMENTS = JSONWebToken/JSONWebToken.entitlements;
 				DEVELOPMENT_TEAM = GFAP5NDM59;
 				INFOPLIST_FILE = TestContainer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Kreactive.TestContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -920,11 +1023,18 @@
 				CODE_SIGN_ENTITLEMENTS = JSONWebToken/JSONWebToken.entitlements;
 				DEVELOPMENT_TEAM = GFAP5NDM59;
 				INFOPLIST_FILE = TestContainer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Kreactive.TestContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -1032,7 +1142,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1054,12 +1165,20 @@
 				INFOPLIST_FILE = JSONWebToken/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kreactive.JSONWebToken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -1076,11 +1195,19 @@
 				INFOPLIST_FILE = JSONWebToken/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kreactive.JSONWebToken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -1089,11 +1216,15 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JSONWebTokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kreactive.JSONWebTokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestContainer.app/TestContainer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestContainer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestContainer";
 			};
 			name = Debug;
 		};
@@ -1102,11 +1233,15 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JSONWebTokenTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kreactive.JSONWebTokenTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestContainer.app/TestContainer";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestContainer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestContainer";
 			};
 			name = Release;
 		};
@@ -1122,14 +1257,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "JSONWebToken tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kreactive.JSONWebToken;
 				PRODUCT_NAME = JSONWebToken;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -1145,14 +1284,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "JSONWebToken tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kreactive.JSONWebToken;
 				PRODUCT_NAME = JSONWebToken;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -1161,11 +1304,17 @@
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				INFOPLIST_FILE = "JSONWebToken tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Kreactive.JSONWebToken-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestContainerTvOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestContainerTvOS";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -1174,11 +1323,101 @@
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				INFOPLIST_FILE = "JSONWebToken tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Kreactive.JSONWebToken-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestContainerTvOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestContainerTvOS";
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		A06B93C92D6C7A5500016AD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q7S78Z5RQG;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.verimatrix.TestContainerTvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
+			};
+			name = Debug;
+		};
+		A06B93CA2D6C7A5500016AD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q7S78Z5RQG;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.verimatrix.TestContainerTvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Release;
 		};
@@ -1235,6 +1474,15 @@
 			buildConfigurations = (
 				719156AB1D1D3BE900FC55C9 /* Debug */,
 				719156AC1D1D3BE900FC55C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A06B93C82D6C7A5500016AD8 /* Build configuration list for PBXNativeTarget "TestContainerTvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A06B93C92D6C7A5500016AD8 /* Debug */,
+				A06B93CA2D6C7A5500016AD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

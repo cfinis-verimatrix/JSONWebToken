@@ -8,6 +8,7 @@ pkg.products = [
 ]
 pkg.platforms = [
     .iOS(.v11),
+    .tvOS(.v11),
 ]
 
 let pmk: Target = .target(name: "JSONWebToken")
